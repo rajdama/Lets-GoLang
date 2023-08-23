@@ -37,4 +37,11 @@ var11 := 5.7
 var12 := int(var11) //Float to Int
 fmt.Println(var12) 
 
+//constants
+const var13 = 1
+const var14 = 2
+const var15 = var13 + var14 // will be computed during compiletime and not runtime unlike in javascript
+fmt.Println(var15) 
+
+
 }
