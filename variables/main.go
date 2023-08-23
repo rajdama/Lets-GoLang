@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-//one way to use variables (not recomended)
+//one way to use variables 
 
 var var1 int
 var var2 float64
@@ -17,7 +17,7 @@ var4 = "hello"
 
 fmt.Printf("%v %f %v %q\n",var1, var2, var3, var4 ) // Using Printf needs format specifying
 
-//second way to use variables (recommended)
+//second way to use variables (preffered)
 
 var5 := 2
 var6 := 0.1
