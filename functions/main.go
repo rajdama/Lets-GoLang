@@ -23,10 +23,17 @@ func getPoint2()  (x,y int) {
 	return x,y
 }
 
+// Multiple Returns
+func divide(dividend, divisor int) (int, error) {
+	if divisor == 0 {
+	return 0, errors.New("Can't divide by zero")
+	}
+	return dividend/divisor, nil
+}
+
 func main() {
 	fmt.Println(concat("hello"," world"))
 	fmt.Println(add(1,2))
 	x, _ := getPoint1() // Ignores y
 	fmt.Println(x)
-
 }
