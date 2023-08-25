@@ -36,6 +36,16 @@ type animal struct {
 	legs int
 }
 
+// Methods on struct
+type rect struct {
+	width int
+	height int
+}
+	
+func (r rect) area() int {  // area has a receiver of (r rect)
+	return r.width * r.height
+}
+
 
 
 func main() {
@@ -69,7 +79,14 @@ func main() {
 	myDog.age = 10
 	myDog.legs = 4
 
-	fmt.Println(myDog)
+	fmt.Println(myDog)		// Prints embedded struct
+
+	r := rect{
+		width: 5,
+		height: 10,
+		}
+
+	fmt.Println(r.area())   // Prints method on struct
 
 
 }
