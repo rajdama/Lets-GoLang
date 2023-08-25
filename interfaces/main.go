@@ -37,7 +37,7 @@ type printer interface {
 	print()
 }
 
-type email struct{
+type email struct{				//email implemets interfaces expense and printer
 	subscribed bool
 	body string
 }
@@ -54,6 +54,11 @@ func (e email) print() {
 	fmt.Println(e.body)
 }
 
+// Arguments in interface
+type Copier interface {
+	Copy (sourceFile string, destinationFile string) (bytesCopied i)
+}
+
 func main(){
 
 	myRect := rect{}			// Implements interface shape
@@ -61,7 +66,7 @@ func main(){
 	myRect.height = 10
 	fmt.Println(myRect.area())
 
-	myemail := email{}			// Implements interface cost and print
+	myemail := email{}			// Implements interface expense and printer
 	myemail.subscribed = true
 	myemail.body = " Hello !"
 	fmt.Println(myemail.cost())
