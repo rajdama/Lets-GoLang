@@ -1,6 +1,12 @@
 package main
 import "fmt"
 
+/*
+1]Use the type keyword to define a new type.
+2]Provide a name for your struct (e.g., MyStruct in the example above).
+3]Inside curly braces {}, list the fields of the struct. Each field has a name and a type separated by a space. You can have multiple fields of different types.
+*/
+
 
 // Simple struct
 type car struct {
