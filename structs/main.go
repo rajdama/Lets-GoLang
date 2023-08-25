@@ -22,17 +22,30 @@ type user struct {
 	number int
 }
 
+
+
 func main() {
 	myCar := car{}		 //All values initialized to default value i.e 0
 
 	myCar.Make = "honda" //Assigning values
 	myCar.Height = 5
 
-	fmt.Println(myCar.Height)
+	fmt.Println(myCar)  // Prints simple struct
 
 	msg := messageToSend{}
 	msg.sender.name = "X"
 	msg.recipient.name = "Y"
 
-	fmt.Println(msg.sender.name, msg.recipient.name )
+	fmt.Println(msg) // Prints nested struct
+
+	Element := struct {
+        name      string
+        branch    string
+    }{
+        name:      "Raj",
+        branch:    "CSE",
+    }
+  
+
+	fmt.Println(Element) // Prints anonymus struct
 }
