@@ -6,6 +6,7 @@ func concat  (s1 string, s2 string)  string     {
 return s1 + s2
 }
 
+
 // Here last argument's data type is every arguments data type
 func add(x, y int) int {
 	return x + y
