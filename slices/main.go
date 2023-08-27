@@ -6,7 +6,8 @@ import "fmt"
 2]It represents a segment of that array, allowing you to work with a variable-length sequence of elements.
 3]Slices provide a way to create, modify, and manipulate sequences of elements without having to worry about memory 
  allocation and management.
- 4]Slice is a reference of array
+4]Slice is a reference of array
+5]A variadic function in programming is a function that can accept a variable number of arguments of the same type
 */
 
 
@@ -53,6 +54,11 @@ func main()  {
 	mySlice4 := array[1:4] // Creates a slice containing elements 2, 3, and 4
 	fmt.Println(mySlice4)
 
+	// Append function
+	mySlice5 := []int{1, 2, 3, 4, 5}
+	mySlice5 = append(mySlice5,8,9)
+	fmt.Println(mySlice5)
+
 	// Variadic slice arguments
 	total := sum(1,2,3)
 	fmt.Println(total)
@@ -61,4 +67,7 @@ func main()  {
 	myNums := []int{3,4,5}
 	mulResult := mul(myNums...)
 	fmt.Println(mulResult)
+
+	
+
 }
