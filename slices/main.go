@@ -59,6 +59,12 @@ func main()  {
 	mySlice5 = append(mySlice5,8,9)
 	fmt.Println(mySlice5)
 
+	// Range keyword
+	mySlice6 := []string{"a","b","c"}
+	for i, val := range mySlice6 {
+		fmt.Println(i,val)
+	}
+
 	// Variadic slice arguments
 	total := sum(1,2,3)
 	fmt.Println(total)
