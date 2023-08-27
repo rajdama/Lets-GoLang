@@ -22,6 +22,17 @@ func sum(nums ...int) int {				// A variadic function receives the variadic argu
 	return sum
 }
 
+func mul(nums ...int) int {				// A variadic function receives the variadic arguments as a slice.
+	// nums is just a slice
+
+	mul := 1
+	for i:= 0; i < len (nums); i++{
+	mul = mul*nums[i]
+	}
+
+	return mul
+}
+
 
 func main()  {
 	
@@ -42,7 +53,12 @@ func main()  {
 	mySlice4 := array[1:4] // Creates a slice containing elements 2, 3, and 4
 	fmt.Println(mySlice4)
 
-	// Vaiadic slice arguments
+	// Variadic slice arguments
 	total := sum(1,2,3)
 	fmt.Println(total)
+
+	// Spread operator
+	myNums := []int{3,4,5}
+	mulResult := mul(myNums...)
+	fmt.Println(mulResult)
 }
