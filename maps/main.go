@@ -20,5 +20,11 @@ func main() {
 	fmt.Println(ages2)
 
 	elem := ages2["John"] // Getting an element from map
-	fmt.Println((elem))
+	fmt.Println(elem)
+
+	delete(ages2, "John") // Deleting an element from map
+	fmt.Println(ages2)
+
+	val, ok := ages2["Mary"] // Checking an element in map
+	fmt.Println(val, ok)
 }
