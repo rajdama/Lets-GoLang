@@ -18,4 +18,7 @@ func main() {
 		"Mary": 35,
 	}
 	fmt.Println(ages2)
+
+	elem := ages2["John"] // Getting an element from map
+	fmt.Println((elem))
 }
