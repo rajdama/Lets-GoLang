@@ -6,6 +6,10 @@ func add (x, y *int) int {
 	return *x + *y
 }
 
+func change (x *int) string {
+	*x = 3
+	return "changed"
+}
 
 
 func main()  {
@@ -20,5 +24,7 @@ func main()  {
 	sum := add(&x,&z)	// passing address in a function
 	fmt.Println(sum)
 
+	change(&x)			// pass by reference
+	fmt.Println(x)
 	
 }
