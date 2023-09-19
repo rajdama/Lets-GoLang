@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	userch1 := make(chan string) //buffered channel i.e capacity is only 1
+	userch1 := make(chan string) //unbuffered channel i.e capacity is only 1
 
 	go func() {
 		userch1 <- "raj" //blocking
@@ -13,7 +13,7 @@ func main() {
 
 	fmt.Println(user)
 
-	userch2 := make(chan string, 2) //unbuffred channel i.e capacity is more than 1
+	userch2 := make(chan string, 2) //buffred channel i.e capacity is more than 1
 
 	userch2 <- "ram" //non-blocking because channel not full
 
