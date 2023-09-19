@@ -16,7 +16,7 @@ func main() {
 	userch2 := make(chan string, 2) //unbuffred channel i.e capacity is more than 1
 
 	go func() {
-		userch2 <- "ram" //non-blocking
+		userch2 <- "ram" //non-blocking because channel not full
 	}()
 
 	user = <-userch2
