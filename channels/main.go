@@ -32,3 +32,10 @@ func sendMessage(msgch chan<- string) { // This specifies we are going to only w
 	msgch <- "hello"
 
 }
+
+func readMessage(msgch <-chan string) { // This specifies we are going to only read from channel msgch and not write anything
+
+	msg := <-msgch
+	fmt.Println(msg)
+
+}
