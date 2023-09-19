@@ -26,3 +26,9 @@ func main() {
 	// userch2 <- "sam" this will result in blocking
 
 }
+
+func sendMessage(msgch chan<- string) { // This specifies we are going to only write to channel msgch and not read anything
+
+	msgch <- "hello"
+
+}
